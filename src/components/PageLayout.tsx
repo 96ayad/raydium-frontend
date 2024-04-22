@@ -643,6 +643,12 @@ function SideMenu({ className, onClickCloseBtn }: { className?: string; onClickC
             <LinkItem icon="/icons/entry-icon-staking.svg" href="/staking" isCurrentRoutePath={pathname === '/staking'}>
               Staking
             </LinkItem>
+
+            {/* create market */}
+            <LinkItem icon="/icons/entry-icon-staking.svg" href="/create-market" isCurrentRoutePath={pathname === '/create-market'}>
+              Create Market
+            </LinkItem>
+
             <LinkItem icon="/icons/entry-icon-acceleraytor.svg" href="/acceleraytor/list">
               AcceleRaytor
             </LinkItem>
