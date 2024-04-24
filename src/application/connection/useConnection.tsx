@@ -71,8 +71,8 @@ export const useConnection = create<ConnectionStore>((set, get) => ({
   switchConnectionFailed: false,
 
   //ayad
-  // userCostomizedUrlText: 'https://', 
-  userCostomizedUrlText: 'https://api.mainnet-beta.solana.com',
+  userCostomizedUrlText: 'https://', 
+  // userCostomizedUrlText: 'https://api.mainnet-beta.solana.com',
 
   switchRpc,
   deleteRpc,
