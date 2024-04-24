@@ -44,9 +44,10 @@ export function SolanaWalletProviders({ children }: { children?: ReactNode }) {
   const { currentEndPoint, isLoading } = useConnection()
   const { pathname } = useRouter()
 
-  // const endpoint = useMemo(() => currentEndPoint?.url ?? clusterApiUrl('devnet'), [currentEndPoint])
   ////////////////////////ayad
-  const endpoint = useMemo(() => currentEndPoint?.url ?? clusterApiUrl('https://api.mainnet-beta.solana.com'), [currentEndPoint])
+  // const endpoint = useMemo(() => currentEndPoint?.url ?? clusterApiUrl('devnet'), [currentEndPoint])
+  // const endpoint = useMemo(() => currentEndPoint?.url ?? clusterApiUrl('https://api.mainnet-beta.solana.com'), [currentEndPoint])
+  const endpoint = useMemo(() => currentEndPoint?.url ?? clusterApiUrl('mainnet-beta'), [currentEndPoint])
 
   const wallets = useMemo(
     () => [
