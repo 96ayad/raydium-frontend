@@ -18,7 +18,9 @@ export type CreateMarket = {
 }
 
 export const useCreateMarket = create<CreateMarket>((set) => ({
-  programId: toPubString(MAINNET_PROGRAM_ID.OPENBOOK_MARKET),
+  ////////////ayad//////////////////
+  // programId: toPubString(MAINNET_PROGRAM_ID.OPENBOOK_MARKET),
+  programId: "EoTcMgcDRTJVZDMZWBoU6rhYHZfkNTVEAfz3uUJRcYGj",
   minimumOrderSize: 1,
   tickSize: 0.01
 }))
