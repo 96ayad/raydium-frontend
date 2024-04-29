@@ -1,4 +1,4 @@
-import { MAINNET_PROGRAM_ID, PublicKeyish } from '@raydium-io/raydium-sdk'
+import { DEVNET_PROGRAM_ID, PublicKeyish } from '@raydium-io/raydium-sdk'
 
 import { create } from 'zustand'
 
@@ -19,8 +19,10 @@ export type CreateMarket = {
 
 export const useCreateMarket = create<CreateMarket>((set) => ({
   ////////////ayad//////////////////
+  
   // programId: toPubString(MAINNET_PROGRAM_ID.OPENBOOK_MARKET),
-  programId: toPubString("EoTcMgcDRTJVZDMZWBoU6rhYHZfkNTVEAfz3uUJRcYGj"),
+  // programId: toPubString("EoTcMgcDRTJVZDMZWBoU6rhYHZfkNTVEAfz3uUJRcYGj"),
+  programId: toPubString(DEVNET_PROGRAM_ID.OPENBOOK_MARKET),
   minimumOrderSize: 1,
   tickSize: 0.01
 }))
