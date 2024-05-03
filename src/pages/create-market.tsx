@@ -44,6 +44,9 @@ function InputCreateMarketCard() {
   const isApprovePanelShown = useAppSettings((s) => s.isApprovePanelShown)
   const walletConnected = useWallet((s) => s.connected)
 
+  ////////ayad//////
+  // console.log(newCreatedMarketId)
+
   return (
     <Col className="gap-8 mx-auto w-[min(800px,100%)]">
       <Fieldset
