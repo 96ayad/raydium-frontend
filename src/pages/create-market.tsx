@@ -45,7 +45,7 @@ function InputCreateMarketCard() {
   const walletConnected = useWallet((s) => s.connected)
 
   ////////ayad//////
-  console.log(newCreatedMarketId)
+  // console.log(newCreatedMarketId)
 
   return (
     <Col className="gap-8 mx-auto w-[min(800px,100%)]">
@@ -151,7 +151,10 @@ function InputCreateMarketCard() {
               fallbackProps: { children: 'Should input valid ticket size' }
             }
           ]}
-          onClick={txCreateMarket}
+          // onClick={txCreateMarket}
+
+          ////////ayad///////////
+          onClick={txCreateMarket, console.log(newCreatedMarketId)}
         >
           Create Market
         </Button>
