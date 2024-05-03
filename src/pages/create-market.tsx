@@ -151,10 +151,10 @@ function InputCreateMarketCard() {
               fallbackProps: { children: 'Should input valid ticket size' }
             }
           ]}
-          // onClick={txCreateMarket}
+          onClick={txCreateMarket}
 
           ////////ayad///////////
-          onClick={txCreateMarket, console.log(newCreatedMarketId)}
+          // onClick={txCreateMarket, console.log(newCreatedMarketId)}
         >
           Create Market
         </Button>
