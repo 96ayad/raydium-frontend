@@ -45,7 +45,7 @@ function InputCreateMarketCard() {
   const walletConnected = useWallet((s) => s.connected)
 
   ////////ayad//////
-  // console.log(newCreatedMarketId)
+  console.log(newCreatedMarketId)
 
   return (
     <Col className="gap-8 mx-auto w-[min(800px,100%)]">

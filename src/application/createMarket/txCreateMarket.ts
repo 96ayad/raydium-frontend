@@ -49,7 +49,8 @@ const txCreateMarket = createTxHandler(() => async ({ transactionCollector, base
       // console.log(address.marketId)
     }
   })
-  console.log(newCreatedMarketId)
+  ///////////ayad///////////
+  // console.log(newCreatedMarketId)
 })
 
 export default txCreateMarket
