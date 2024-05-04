@@ -1,4 +1,7 @@
-import { MAINNET_PROGRAM_ID, RAYDIUM_MAINNET } from '@raydium-io/raydium-sdk'
+///////////ayad///////////////
+// import { MAINNET_PROGRAM_ID, RAYDIUM_MAINNET } from '@raydium-io/raydium-sdk'
+import { DEVNET_PROGRAM_ID, RAYDIUM_MAINNET } from '@raydium-io/raydium-sdk'
+
 import { create } from 'zustand'
 import { ApiConfig } from './apiUrl.config'
 import { getLocalItem } from '@/functions/dom/jStorage'
@@ -6,7 +9,7 @@ import { getLocalItem } from '@/functions/dom/jStorage'
 export const DEFAULT_URL_ENDPOINT = 'https://uapi.raydium.io'
 export type AppAdvancedSettingsStore = {
   mode: 'mainnet' | 'devnet'
-  programIds: typeof MAINNET_PROGRAM_ID
+  programIds: typeof DEVNET_PROGRAM_ID
   readonly apiUrls: {
     [K in keyof ApiConfig]: `https://uapi.raydium.io/${K}`
   }
@@ -16,7 +19,7 @@ export type AppAdvancedSettingsStore = {
 
 export const useAppAdvancedSettings = create<AppAdvancedSettingsStore>((set, get) => ({
   mode: getLocalItem('ADVANCED_SETTINGS_TAB') ?? 'mainnet',
-  programIds: MAINNET_PROGRAM_ID,
+  programIds: DEVNET_PROGRAM_ID,
   get apiUrls() {
     return new Proxy({} as any, {
       get(target, p, receiver) {
