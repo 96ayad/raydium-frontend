@@ -1,6 +1,6 @@
 ///////////ayad///////////////
 // import { MAINNET_PROGRAM_ID, RAYDIUM_MAINNET } from '@raydium-io/raydium-sdk'
-import { DEVNET_PROGRAM_ID, RAYDIUM_MAINNET } from '@raydium-io/raydium-sdk'
+import { DEVNET_PROGRAM_ID, RAYDIUM_DEVNET } from '@raydium-io/raydium-sdk'
 
 import { create } from 'zustand'
 import { ApiConfig } from './apiUrl.config'
@@ -14,7 +14,7 @@ export type AppAdvancedSettingsStore = {
     [K in keyof ApiConfig]: `https://uapi.raydium.io/${K}`
   }
   apiUrlOrigin: string
-  apiUrlPathnames: typeof RAYDIUM_MAINNET
+  apiUrlPathnames: typeof RAYDIUM_DEVNET
 }
 
 export const useAppAdvancedSettings = create<AppAdvancedSettingsStore>((set, get) => ({
@@ -28,7 +28,7 @@ export const useAppAdvancedSettings = create<AppAdvancedSettingsStore>((set, get
     })
   },
   apiUrlOrigin: getLocalItem('ADVANCED_SETTINGS_ENDPOINT') ?? DEFAULT_URL_ENDPOINT,
-  apiUrlPathnames: RAYDIUM_MAINNET
+  apiUrlPathnames: RAYDIUM_DEVNET
 }))
 
 export default useAppAdvancedSettings
